@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Control Structures/While Statement</title>
+        <script>
+            function changeChooser() {
+                console.log("got change.");
+                var chooser = document.getElementById("animalChooser");
+                var options = chooser.options;
+                var counter = 0;
+                
+                while (counter < options.length) {
+                    if (options[counter].selected) {
+                        document.getElementById(options[counter].value).style.display = "";
+                    } else {
+                        document.getElementById(options[counter].value).style.display = "none";
+                    }
+                    counter = counter +1;
+                }
+                
+            }
+        </script>
+    </head>
+    <body onload="changeChooser();">
+        <h1>The While Statement</h1>
+        <select id="animalChooser" onchange="changeChooser();">
+            <option value="quokkaContent">Quokka</option>
+            <option value="quokka2Content">Another Quokka</option>
+            <option value="quokka3Content">More Quokka!</option>
+            <option value="quokka4Content">Even More Quokka!</option>
+            <option value="quokka5Content">Quokka Quokka Quokka!</option>
+        </select>
+        <div id="quokkaContent">
+            <h2>It's a Quokka!</h2>
+            <img src="images/quokka.jpg">
+        </div>
+        <div id="quokka2Content">
+            <h2>It's another Quokka!</h2>
+            <img src="images/quokka2.png">
+        </div>
+        <div id="quokka3Content">
+            <h2>It's even more Quokka content!</h2>
+            <img src="images/quokka3.jpg">
+        </div>
+        <div id="quokka4Content">
+            <h2>What?! More quokka?!</h2>
+            <img src="images/quokka4.jpg">
+        </div>
+        <div id="quokka5Content">
+            <h2>Quokka forever!</h2>
+            <img src="images/quokka5.jpg">
+        </div>
+    </body>
+</html>

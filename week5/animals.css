@@ -1,0 +1,17 @@
+.arrowButton {
+    width: 40px;
+    height: 40px;
+}
+
+#rightButton {
+    float: right;
+}
+
+#leftButton {
+    float: left;
+}
+
+#content {
+    text-align: center;
+    
+}

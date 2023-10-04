@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Covid Data</title>
+    </head>
+    <body>
+        
+    </body>
+</html>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+
+<script>
+    
+$.getJSON('https://coronavirus-19-api.herokuapp.com/all', function(data) {
+
+  document.write("<table border='1'>");
+  for (var key in data) 
+  {
+    document.write("<tr>");
+    document.write("<td>" + key + "</td> <td>" +data[key] + "</td>");
+    document.write("</tr>");
+      
+  }
+  document.write("</table>");
+});
+    
+</script>
